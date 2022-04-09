@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <script src="https://pagecdn.io/lib/ace/1.4.14/ace.min.js" crossorigin="anonymous"
+            integrity="sha256-lHff7sYmofr9GsfmfNbPsMy6XbG8HoG0/zJvtovyCMU="></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>JSON to CSV</title>
+</head>
+<body>
+
+<div class="main">
+
+    <section class="upload-section">
+        <h2>Upload or paste JSON</h2>
+        <p>Maximum size 3MB</p>
+
+        <input id="json" accept=".json" type="file" onchange="jsonToCsvConverter.checkFile(event.target.files[0])">
+        <div class="json-file">
+            <label type="button" for="json" class="upload-btn">
+                <span><span class="label-text">Upload File</span></span>
+            </label>
+        </div>
+
+        <p class="error"></p>
+
+        <div class="text-editor" id="editor"></div>
+
+    </section>
+
+    <section class="result-section">
+        <div class="table-container"></div>
+    </section>
+
+</div>
+
+
+<script src="./assets/scripts/main.js"></script>
+</body>
+</html>
